@@ -3,10 +3,10 @@ Tutorial mão na massa sobre Mocks em testes unitários Python
 
 ## Conteúdo
 
-1. [Revisão sobre testes automatizados](revisao.md)
-2. [Test Doubles (ou Mocks para os íntimos)](doubles.md)
-3. [Unittest: testes automatizados usando Just Python](unittest.md)
-4. [unittest.mock](unittest_mock.md)
+1. [Revisão sobre testes automatizados](/docs/revisao.md)
+2. [Test Doubles (ou Mocks para os íntimos)](/docs/doubles.md)
+3. [Unittest: testes automatizados usando Just Python](/docs/unittest.md)
+4. [unittest.mock](/docs/unittest_mock.md)
 
 
 ## Referências
