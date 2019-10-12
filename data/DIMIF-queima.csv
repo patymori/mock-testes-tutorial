@@ -1,0 +1,326 @@
+﻿Código CNUC;Nome da UC;Categoria da UC: sigla federal;Categoria da UC: nomenclatura nacional;Grupo de Proteção;Ano de criação;Coordenação Regional do ICMBio;Área estimada da UC (ha);Bioma referencial;Área queimada em 2018;Área queimada em 2017;Área queimada em 2016;Área queimada em 2015;Área queimada em 2014;Área queimada em 2013;Área queimada em 2012
+0000.00.0001;APA Anhatomirim;APA;Área de Proteção Ambiental;uso sustentável;1992;CR9 Florianópolis/SC;4.437;Marinho-Costeiro;;;;;;;
+0000.00.1521;APA Bacia Hidrográfica do Rio Paraíba do Sul;APA;Área de Proteção Ambiental;uso sustentável;1982;CR8 Rio de Janeiro/RJ;292.600;Mata Atlântica;;182,1;;;;;
+0000.00.0007;APA Barra do Rio Mamanguape;APA;Área de Proteção Ambiental;uso sustentável;1993;CR6 Cabedelo/PB;14.918;Marinho-Costeiro;;;;;;;
+0000.00.0020;APA Carste da Lagoa Santa;APA;Área de Proteção Ambiental;uso sustentável;1990;CR11 Lagoa Santa/MG;39.957;Cerrado;;;;;;;
+0000.00.0002;APA Cavernas do Peruaçu;APA;Área de Proteção Ambiental;uso sustentável;1989;CR11 Lagoa Santa/MG;143.356;Cerrado;;260,7;;;;;
+0000.00.0008;APA Chapada do Araripe;APA;Área de Proteção Ambiental;uso sustentável;1997;CR6 Cabedelo/PB;972.605;Caatinga;;;;;;;
+0000.00.1912;APA Costa das Algas;APA;Área de Proteção Ambiental;uso sustentável;2010;CR7 Porto Seguro/BA;114.805;Mata Atlântica;;;;;;;
+0000.00.0009;APA Costa dos Corais;APA;Área de Proteção Ambiental;uso sustentável;1997;CR6 Cabedelo/PB;404.286;Marinho-Costeiro;;;;;;;
+0000.00.0003;APA da Bacia do Rio Descoberto;APA;Área de Proteção Ambiental;uso sustentável;1983;CR11 Lagoa Santa/MG;41.784;Cerrado;;1.585,4;;;;;
+0000.00.0004;APA da Bacia do Rio São Bartolomeu;APA;Área de Proteção Ambiental;uso sustentável;1983;CR11 Lagoa Santa/MG;82.681;Cerrado;;1.620,0;;;;;
+0000.00.0005;APA da Bacia do Rio São João - Mico-Leão-Dourado;APA;Área de Proteção Ambiental;uso sustentável;2002;CR8 Rio de Janeiro/RJ;150.375;Mata Atlântica;;;;;;;
+0000.00.0006;APA da Baleia Franca;APA;Área de Proteção Ambiental;uso sustentável;2000;CR9 Florianópolis/SC;154.867;Marinho-Costeiro;;;;;;;
+0000.00.0025;APA das Ilhas e Várzeas do Rio Paraná;APA;Área de Proteção Ambiental;uso sustentável;1997;CR9 Florianópolis/SC;1.005.188;Mata Atlântica;;5.972,3;;;;;14.447,0
+0000.00.0028;APA das Nascentes do Rio Vermelho;APA;Área de Proteção Ambiental;uso sustentável;2001;CR11 Lagoa Santa/MG;176.324;Cerrado;;7.592,3;;;;;
+0000.00.0013;APA de Cairuçu;APA;Área de Proteção Ambiental;uso sustentável;1983;CR8 Rio de Janeiro/RJ;32.611;Marinho-Costeiro;;;;;;;
+0000.00.0014;APA de Cananéia-Iguape-Peruíbe;APA;Área de Proteção Ambiental;uso sustentável;1984;CR8 Rio de Janeiro/RJ;202.310;Marinho-Costeiro;;;;;;;
+0000.00.0015;APA de Fernando de Noronha -Rocas – São Pedro e São Paulo;APA;Área de Proteção Ambiental;uso sustentável;1986;CR6 Cabedelo/PB;884;Marinho-Costeiro;;;;;;;
+0000.00.0016;APA de Guapi-Mirim;APA;Área de Proteção Ambiental;uso sustentável;1984;CR8 Rio de Janeiro/RJ;13.927;Marinho-Costeiro;;;;;;;
+0000.00.0017;APA de Guaraqueçaba;APA;Área de Proteção Ambiental;uso sustentável;1985;CR9 Florianópolis/SC;282.446;Mata Atlântica;;;;;;;
+0000.00.0010;APA de Petrópolis;APA;Área de Proteção Ambiental;uso sustentável;1982;CR8 Rio de Janeiro/RJ;68.224;Mata Atlântica;;;;;;;
+0000.00.0018;APA de Piaçabuçu;APA;Área de Proteção Ambiental;uso sustentável;1983;CR6 Cabedelo/PB;9.107;Marinho-Costeiro;;;;;;;
+0000.00.0019;APA Delta do Parnaíba;APA;Área de Proteção Ambiental;uso sustentável;1996;CR5 Parnaíba/PI;307.595;Marinho-Costeiro;;1.367,1;;;;;
+0000.00.0022;APA do Igarapé Gelado;APA;Área de Proteção Ambiental;uso sustentável;1989;CR4 Belém/PA;23.285;Amazônia;;;;;;;
+0000.00.0023;APA do Planalto Central;APA;Área de Proteção Ambiental;uso sustentável;2002;CR11 Lagoa Santa/MG;503.423;Cerrado;;13.509,7;;;;;
+0000.00.0268;APA do Tapajós;APA;Área de Proteção Ambiental;uso sustentável;2006;CR3 Santarém/PA;2.040.331;Amazônia;;;;;;;598,9
+0000.00.3407;APA dos Campos de Manicoré;APA;Área de Proteção Ambiental;uso sustentável;2016;CR1 Porto Velho/RO;151.993;Amazônia;;;;;;;
+0000.00.0021;APA Ibirapuitã;APA;Área de Proteção Ambiental;uso sustentável;1992;CR9 Florianópolis/SC;316.792;Pampas;;;;;;;
+0000.00.0024;APA Meandros do Araguaia;APA;Área de Proteção Ambiental;uso sustentável;1998;CR10 Cuiabá/MT;359.194;Cerrado;;114.142,6;;;;;82.626,4
+0000.00.0027;APA Morro da Pedreira;APA;Área de Proteção Ambiental;uso sustentável;1990;CR11 Lagoa Santa/MG;131.771;Cerrado;;360,3;5.852,6;6.669,0;;;1.107,7
+0000.00.0029;APA Serra da Ibiapaba;APA;Área de Proteção Ambiental;uso sustentável;1996;CR5 Parnaíba/PI;1.628.450;Caatinga;;9.986,1;;;;;
+0000.00.0011;APA Serra da Mantiqueira;APA;Área de Proteção Ambiental;uso sustentável;1985;CR8 Rio de Janeiro/RJ;421.809;Mata Atlântica;;3.703,6;;;;;
+0000.00.1683;APA Serra da Meruoca;APA;Área de Proteção Ambiental;uso sustentável;2008;CR5 Parnaíba/PI;29.362;Caatinga;;;;;;;
+0000.00.0012;APA Serra da Tabatinga;APA;Área de Proteção Ambiental;uso sustentável;1990;CR5 Parnaíba/PI;35.186;Cerrado;;;;;;;
+0000.00.0030;ARIE Buriti de Vassununga;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1990;CR11 Lagoa Santa/MG;151;Mata Atlântica;;;;;;;
+0000.00.0031;ARIE Capetinga-Taquara;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR11 Lagoa Santa/MG;2.057;Cerrado;;;;;;;
+0000.00.0032;ARIE Cerrado Pé-de-Gigante;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1990;CR8 Rio de Janeiro/RJ;1.199;Mata Atlântica;;;;;;;
+0000.00.0035;ARIE Floresta da Cicuta;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR8 Rio de Janeiro/RJ;125;Mata Atlântica;;;;;;;
+0000.00.0036;ARIE Ilha do Ameixal;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR8 Rio de Janeiro/RJ;359;Marinho-Costeiro;;;;;;;
+0000.00.0037;ARIE Ilhas da Queimada Pequena e Queimada Grande;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR8 Rio de Janeiro/RJ;138;Marinho-Costeiro;;;;;;;
+0000.00.0038;ARIE Javari-Buriti;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR2 Manaus/AM;13.177;Amazônia;;;;;;;
+0000.00.0039;ARIE Manguezais da Foz do Rio Mamanguape;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR6 Cabedelo/PB;5.770;Marinho-Costeiro;;;;;;;
+0000.00.0040;ARIE Mata de Santa Genebra;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR8 Rio de Janeiro/RJ;242;Mata Atlântica;;;;;;;
+0000.00.0041;ARIE Matão de Cosmópolis;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR8 Rio de Janeiro/RJ;229;Cerrado;;;;;;;
+0000.00.0043;ARIE Projeto Dinâmica Biológica de Fragmentos Florestais;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1985;CR2 Manaus/AM;3.180;Amazônia;;;;;;;
+0000.00.0044;ARIE Seringal Nova Esperança;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1999;CR1 Porto Velho/RO;2.574;Amazônia;;;;;;;
+0000.00.0045;ARIE Serra da Abelha e Rio da Prata;ARIE;Área de Relevante Interesse Ecológico;uso sustentável;1990;CR9 Florianópolis/SC;5.017;Mata Atlântica;;;;;;;
+0000.00.3131;ESEC Alto Maués;ESEC;Estação Ecológica;proteção integral;2014;CR2 Manaus/AM;668.160;Amazônia;;;;;;;
+0000.00.0263;ESEC da Guanabara;ESEC;Estação Ecológica;proteção integral;2006;CR8 Rio de Janeiro/RJ;1.936;Mata Atlântica;;;;;;;
+0000.00.0261;ESEC da Mata Preta;ESEC;Estação Ecológica;proteção integral;2005;CR9 Florianópolis/SC;6.567;Mata Atlântica;;;;;;;
+0000.00.0075;ESEC da Serra das Araras;ESEC;Estação Ecológica;proteção integral;1982;CR10 Cuiabá/MT;27.160;Cerrado;;2.450,4;;;;;
+0000.00.0047;ESEC da Terra do Meio;ESEC;Estação Ecológica;proteção integral;2005;CR3 Santarém/PA;3.373.175;Amazônia;365,3;8.815,1;347,8;2.599,2;766,6;;2.136,9
+0000.00.0048;ESEC de Aiuaba;ESEC;Estação Ecológica;proteção integral;2001;CR6 Cabedelo/PB;11.747;Caatinga;;;;;;;
+0000.00.0050;ESEC de Aracuri-Esmeralda;ESEC;Estação Ecológica;proteção integral;1981;CR9 Florianópolis/SC;277;Mata Atlântica;;;;;;;
+0000.00.0051;ESEC de Caracaraí;ESEC;Estação Ecológica;proteção integral;1982;CR2 Manaus/AM;86.795;Amazônia;;;731,4;3.975,5;291,7;;
+0000.00.0052;ESEC de Carijós;ESEC;Estação Ecológica;proteção integral;1987;CR9 Florianópolis/SC;759;Mata Atlântica;;;;;;;
+0000.00.0053;ESEC de Cuniã;ESEC;Estação Ecológica;proteção integral;2001;CR1 Porto Velho/RO;185.314;Amazônia;1.088,6;;;;;4.451,2;672,8
+0000.00.0054;ESEC de Guaraqueçaba;ESEC;Estação Ecológica;proteção integral;1982;CR9 Florianópolis/SC;4.476;Mata Atlântica;;;;;;;
+0000.00.0055;ESEC de Iquê;ESEC;Estação Ecológica;proteção integral;1981;CR10 Cuiabá/MT;215.971;Cerrado;;440,4;;;;;
+0000.00.0056;ESEC de Jutaí-Solimões;ESEC;Estação Ecológica;proteção integral;1983;CR2 Manaus/AM;289.514;Amazônia;;;;;;;
+0000.00.0057;ESEC de Maracá;ESEC;Estação Ecológica;proteção integral;1981;CR2 Manaus/AM;103.520;Amazônia;;;;;;;
+0000.00.0058;ESEC de Maracá Jipioca;ESEC;Estação Ecológica;proteção integral;1981;CR4 Belém/PA;60.253;Amazônia;;;;;;;
+0000.00.0059;ESEC de Murici;ESEC;Estação Ecológica;proteção integral;2001;CR6 Cabedelo/PB;6.132;Mata Atlântica;;;;;;;
+0000.00.0061;ESEC de Pirapitinga;ESEC;Estação Ecológica;proteção integral;1987;CR11 Lagoa Santa/MG;1.385;Cerrado;;;;;;;
+0000.00.0062;ESEC de Taiamã;ESEC;Estação Ecológica;proteção integral;1981;CR10 Cuiabá/MT;11.555;Pantanal;;;;;;;
+0000.00.0063;ESEC de Tamoios;ESEC;Estação Ecológica;proteção integral;1990;CR8 Rio de Janeiro/RJ;9.361;Mata Atlântica;;;;;;;
+0000.00.0065;ESEC de Uruçui-Una;ESEC;Estação Ecológica;proteção integral;1981;CR5 Parnaíba/PI;135.122;Cerrado;19.132,7;27.425,2;28.439,7;59.146,7;34.874,5;12.267,6;65.507,6
+0000.00.0066;ESEC do Castanhão;ESEC;Estação Ecológica;proteção integral;2001;CR6 Cabedelo/PB;12.575;Caatinga;1.513,1;;;;;;
+0000.00.0067;ESEC do Jari;ESEC;Estação Ecológica;proteção integral;1982;CR4 Belém/PA;231.082;Amazônia;;;;;;;
+0000.00.0069;ESEC do Seridó;ESEC;Estação Ecológica;proteção integral;1982;CR6 Cabedelo/PB;1.124;Caatinga;;;;;;;
+0000.00.0070;ESEC do Taim;ESEC;Estação Ecológica;proteção integral;1986;CR9 Florianópolis/SC;10.939;Pampas;;;;;;3.930,4;
+0000.00.0071;ESEC dos Tupiniquins;ESEC;Estação Ecológica;proteção integral;1986;CR8 Rio de Janeiro/RJ;1.728;Marinho-Costeiro;;;;;;;
+0000.00.0072;ESEC Juami-Japurá;ESEC;Estação Ecológica;proteção integral;1985;CR2 Manaus/AM;831.532;Amazônia;;;;;;;
+0000.00.0073;ESEC Mico-Leão-Preto;ESEC;Estação Ecológica;proteção integral;2002;CR8 Rio de Janeiro/RJ;6.681;Mata Atlântica;;;;;;;
+0000.00.0060;ESEC Niquiá;ESEC;Estação Ecológica;proteção integral;1985;CR2 Manaus/AM;284.791;Amazônia;71.161,7;;;;;;
+0000.00.0074;ESEC Raso da Catarina;ESEC;Estação Ecológica;proteção integral;1984;CR6 Cabedelo/PB;104.844;Caatinga;;;;1.758,2;;;
+0000.00.0068;ESEC Rio Acre;ESEC;Estação Ecológica;proteção integral;1981;CR1 Porto Velho/RO;79.094;Amazônia;;;;;;;
+0000.00.0076;ESEC Serra Geral do Tocantins;ESEC;Estação Ecológica;proteção integral;2001;CR5 Parnaíba/PI;707.088;Cerrado;141.042,2;185.744,1;229.960,2;233.367,8;286.303,7;192.624,9;251.539,1
+0000.00.0064;ESEC Tupinambás;ESEC;Estação Ecológica;proteção integral;1987;CR8 Rio de Janeiro/RJ;2.464;Marinho-Costeiro;;;;;;;
+0000.00.0128;FLONA da Mata Grande;FLONA;Floresta;uso sustentável;2003;CR11 Lagoa Santa/MG;2.010;Cerrado;;;;;;;
+0000.00.0132;FLONA da Restinga de Cabedelo;FLONA;Floresta;uso sustentável;2004;CR6 Cabedelo/PB;115;Mata Atlântica;;;;;;;
+0000.00.0082;FLONA de Açu;FLONA;Floresta;uso sustentável;2001;CR6 Cabedelo/PB;218;Caatinga;;;;;;;
+0000.00.0083;FLONA de Altamira;FLONA;Floresta;uso sustentável;1998;CR3 Santarém/PA;724.974;Amazônia;306,8;5.562,9;3.586,4;3.223,1;3.284,5;;3.389,3
+0000.00.0084;FLONA de Anauá;FLONA;Floresta;uso sustentável;2005;CR2 Manaus/AM;259.403;Amazônia;;;;;;;
+0000.00.0077;FLONA de Assungui;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;561;Mata Atlântica;;;;;;;
+0000.00.0085;FLONA de Balata-Tufari;FLONA;Floresta;uso sustentável;2005;CR1 Porto Velho/RO;1.079.678;Amazônia;1.103,9;;587,3;;;;
+0000.00.0086;FLONA de Brasília;FLONA;Floresta;uso sustentável;1999;CR11 Lagoa Santa/MG;9.336;Cerrado;;2.634,6;1.610,4;760,5;984,6;406,8;
+0000.00.0078;FLONA de Caçador;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;707;Mata Atlântica;;;;;;;
+0000.00.0087;FLONA de Canela;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;564;Mata Atlântica;;;;;;;
+0000.00.0079;FLONA de Capão Bonito;FLONA;Floresta;uso sustentável;1968;CR8 Rio de Janeiro/RJ;4.758;Cerrado;;;;;;;
+0000.00.0088;FLONA de Carajás;FLONA;Floresta;uso sustentável;1998;CR4 Belém/PA;392.730;Amazônia;;290,5;;;;;
+0000.00.0089;FLONA de Caxiuana;FLONA;Floresta;uso sustentável;1961;CR4 Belém/PA;317.951;Amazônia;;;;;;;
+0000.00.0080;FLONA de Chapecó;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;1.604;Mata Atlântica;;;;;;;
+0000.00.0081;FLONA de Contendas do Sincorá;FLONA;Floresta;uso sustentável;1999;CR7 Porto Seguro/BA;11.216;Caatinga;;;;;;;
+0000.00.0090;FLONA de Cristópolis;FLONA;Floresta;uso sustentável;2001;CR7 Porto Seguro/BA;12.841;Cerrado;328,8;;;;;;
+0000.00.0091;FLONA de Goytacazes;FLONA;Floresta;uso sustentável;2002;CR7 Porto Seguro/BA;1.426;Mata Atlântica;;;;;;;
+0000.00.0092;FLONA de Humaitá;FLONA;Floresta;uso sustentável;1998;CR1 Porto Velho/RO;473.159;Amazônia;;;;;;;
+0000.00.0093;FLONA de Ibirama;FLONA;Floresta;uso sustentável;1988;CR9 Florianópolis/SC;519;Mata Atlântica;;;;;;;
+0000.00.0094;FLONA de Ipanema;FLONA;Floresta;uso sustentável;1992;CR8 Rio de Janeiro/RJ;5.385;Mata Atlântica;11,4;;;;;;
+0000.00.0125;FLONA de Irati;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;3.803;Mata Atlântica;;;;;;;
+0000.00.0095;FLONA de Itaituba I;FLONA;Floresta;uso sustentável;1998;CR3 Santarém/PA;212.892;Amazônia;;;;;;;
+0000.00.0096;FLONA de Itaituba II;FLONA;Floresta;uso sustentável;1998;CR3 Santarém/PA;397.756;Amazônia;;1.293,6;;;;;
+0000.00.0097;FLONA de Jacundá;FLONA;Floresta;uso sustentável;2004;CR1 Porto Velho/RO;221.220;Amazônia;;182,6;;;;;
+0000.00.0098;FLONA de Lorena;FLONA;Floresta;uso sustentável;2001;CR8 Rio de Janeiro/RJ;281;Mata Atlântica;;;;;;;
+0000.00.0099;FLONA de Mulata;FLONA;Floresta;uso sustentável;2001;CR3 Santarém/PA;216.604;Amazônia;;;;584,1;;;
+0000.00.1605;FLONA de Negreiros;FLONA;Floresta;uso sustentável;2007;CR6 Cabedelo/PB;3.005;Caatinga;;;;;;;
+0000.00.0100;FLONA de Nísia Floresta;FLONA;Floresta;uso sustentável;2001;CR6 Cabedelo/PB;169;Mata Atlântica;;;;;;;
+0000.00.0101;FLONA de Pacotuba;FLONA;Floresta;uso sustentável;2002;CR7 Porto Seguro/BA;449;Mata Atlântica;;;;;;;
+0000.00.0102;FLONA de Palmares;FLONA;Floresta;uso sustentável;2005;CR5 Parnaíba/PI;168;Caatinga;;;;;;;
+0000.00.0103;FLONA de Paraopeba;FLONA;Floresta;uso sustentável;2001;CR11 Lagoa Santa/MG;203;Cerrado;;;;;;;
+0000.00.0129;FLONA de Passa Quatro;FLONA;Floresta;uso sustentável;1968;CR8 Rio de Janeiro/RJ;335;Mata Atlântica;;;;;;;
+0000.00.0130;FLONA de Passo Fundo;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;1.334;Mata Atlântica;;;;;;;
+0000.00.0104;FLONA de Pau-Rosa;FLONA;Floresta;uso sustentável;2001;CR2 Manaus/AM;988.187;Amazônia;;;;;;;
+0000.00.0131;FLONA de Piraí do Sul;FLONA;Floresta;uso sustentável;2004;CR9 Florianópolis/SC;170;Mata Atlântica;;;;;;;
+0000.00.0105;FLONA de Ritápolis;FLONA;Floresta;uso sustentável;1999;CR11 Lagoa Santa/MG;89;Mata Atlântica;;;;;;;
+0000.00.0106;FLONA de Roraima;FLONA;Floresta;uso sustentável;1989;CR2 Manaus/AM;167.332;Amazônia;1.382,4;;1.584,6;696,9;;;
+0000.00.0107;FLONA de Santa Rosa do Purus;FLONA;Floresta;uso sustentável;2001;CR1 Porto Velho/RO;231.557;Amazônia;;;;;;;
+0000.00.0108;FLONA de São Francisco;FLONA;Floresta;uso sustentável;2001;CR1 Porto Velho/RO;21.148;Amazônia;;;;;;;
+0000.00.0133;FLONA de São Francisco de Paula;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;1.616;Mata Atlântica;;;;;;;
+0000.00.0110;FLONA de Silvânia;FLONA;Floresta;uso sustentável;2001;CR11 Lagoa Santa/MG;487;Cerrado;;;;;;;
+0000.00.0111;FLONA de Sobral;FLONA;Floresta;uso sustentável;2001;CR5 Parnaíba/PI;661;Caatinga;;;;;;;
+0000.00.0112;FLONA de Tefé;FLONA;Floresta;uso sustentável;1989;CR2 Manaus/AM;865.127;Amazônia;;;;;;;
+0000.00.0134;FLONA de Três Barras;FLONA;Floresta;uso sustentável;1968;CR9 Florianópolis/SC;4.385;Mata Atlântica;;;;;;;
+0000.00.3408;FLONA de Urupadi;FLONA;Floresta;uso sustentável;2016;CR1 Porto Velho/RO;537.228;Amazônia;;;;;;;
+0000.00.0271;FLONA do Amana;FLONA;Floresta;uso sustentável;2006;CR3 Santarém/PA;680.843;Amazônia;;;;;;;
+0000.00.0113;FLONA do Amapá;FLONA;Floresta;uso sustentável;1989;CR4 Belém/PA;460.359;Amazônia;;;;;;;
+0000.00.0114;FLONA do Amazonas;FLONA;Floresta;uso sustentável;1989;CR2 Manaus/AM;1.944.230;Amazônia;;;2.830,4;;;;
+0000.00.0115;FLONA do Araripe-Apodi;FLONA;Floresta;uso sustentável;1946;CR6 Cabedelo/PB;38.920;Caatinga;;;;;;;
+0000.00.3409;FLONA do Aripuanã;FLONA;Floresta;uso sustentável;2016;CR1 Porto Velho/RO;751.295;Amazônia;331,8;531,8;;;;;
+0000.00.0116;FLONA do Bom Futuro;FLONA;Floresta;uso sustentável;1988;CR1 Porto Velho/RO;97.385;Amazônia;2.909,8;5.056,2;1.299,2;3.956,6;805,8;85,2;3.543,3
+0000.00.0270;FLONA do Crepori;FLONA;Floresta;uso sustentável;2006;CR3 Santarém/PA;740.396;Amazônia;;;;;;;
+0000.00.0269;FLONA do Ibura;FLONA;Floresta;uso sustentável;2005;CR6 Cabedelo/PB;144;Mata Atlântica;;;;;;;
+0000.00.1612;FLONA do Iquiri;FLONA;Floresta;uso sustentável;2008;CR1 Porto Velho/RO;1.472.610;Amazônia;;;;410,3;;;1.104,2
+0000.00.0117;FLONA do Itacaiunas;FLONA;Floresta;uso sustentável;1998;CR4 Belém/PA;136.701;Amazônia;;1.107,8;237,7;;;153,9;
+0000.00.0266;FLONA do Jamanxim;FLONA;Floresta;uso sustentável;2006;CR3 Santarém/PA;1.301.697;Amazônia;17.203,9;37.380,6;25.239,7;30.275,2;16.660,3;2.879,6;14.298,7
+0000.00.0118;FLONA do Jamari;FLONA;Floresta;uso sustentável;1984;CR1 Porto Velho/RO;222.116;Amazônia;;40,2;;;;;
+0000.00.0119;FLONA do Jatuarana;FLONA;Floresta;uso sustentável;2002;CR1 Porto Velho/RO;569.428;Amazônia;;;;;;;
+0000.00.0120;FLONA do Macauã;FLONA;Floresta;uso sustentável;1988;CR1 Porto Velho/RO;176.347;Amazônia;;;;;;;
+0000.00.0121;FLONA do Purus;FLONA;Floresta;uso sustentável;1988;CR1 Porto Velho/RO;256.123;Amazônia;;;;;;;
+0000.00.0122;FLONA do Rio Preto;FLONA;Floresta;uso sustentável;1990;CR7 Porto Seguro/BA;2.817;Mata Atlântica;;;;;;;
+0000.00.0123;FLONA do Tapajós;FLONA;Floresta;uso sustentável;1974;CR3 Santarém/PA;530.621;Amazônia;;;;;;;
+0000.00.0124;FLONA do TapirapéAquiri;FLONA;Floresta;uso sustentável;1989;CR4 Belém/PA;196.506;Amazônia;;;;;;;
+0000.00.0265;FLONA do Trairão;FLONA;Floresta;uso sustentável;2006;CR3 Santarém/PA;257.529;Amazônia;;;;;;;
+0000.00.0126;FLONA Mapiá-Inauini;FLONA;Floresta;uso sustentável;1989;CR1 Porto Velho/RO;368.950;Amazônia;;;;;;;
+0000.00.0127;FLONA Mário Xavier;FLONA;Floresta;uso sustentável;1986;CR8 Rio de Janeiro/RJ;496;Mata Atlântica;;;;;;;
+0000.00.0109;FLONA Sarará-Taquara;FLONA;Floresta;uso sustentável;1989;CR3 Santarém/PA;441.288;Amazônia;;;;;;;
+0000.00.0034;MONA das Ilhas Cagarras;MONA;Monumento Natural;proteção integral;2010;CR8 Rio de Janeiro/RJ;106;Marinho-Costeiro;;;;;;;
+0000.00.1812;MONA do Rio São Francisco;MONA;Monumento Natural;proteção integral;2009;CR6 Cabedelo/PB;26.737;Caatinga;;;;;;;
+0000.00.0181;MONA dos Pontões Capixabas;MONA;Monumento Natural;proteção integral;2008;CR7 Porto Seguro/BA;17.444;Mata Atlântica;;85,5;;;;;
+0000.00.0135;PARNA Cavernas do Peruaçu;PARNA;Parque;proteção integral;1999;CR11 Lagoa Santa/MG;56.449;Cerrado;;;;;;;
+0000.00.0136;PARNA da Amazônia;PARNA;Parque;proteção integral;1974;CR3 Santarém/PA;1.066.208;Amazônia;;;;;;;
+0000.00.0272;PARNA da Chapada das Mesas;PARNA;Parque;proteção integral;2005;CR5 Parnaíba/PI;159.954;Cerrado;;20.046,7;;19.498,7;20.980,8;34.850,9;16.956,9
+0000.00.0137;PARNA da Chapada Diamantina;PARNA;Parque;proteção integral;1985;CR7 Porto Seguro/BA;152.144;Caatinga;3.958,8;356,0;2.274,8;32.997,9;;2.733,6;6.963,6
+0000.00.0138;PARNA da Chapada dos Guimarães;PARNA;Parque;proteção integral;1989;CR10 Cuiabá/MT;32.647;Cerrado;;4.309,5;2.651,7;6.643,0;;;1.903,4
+0000.00.0139;PARNA da Chapada dos Veadeiros;PARNA;Parque;proteção integral;1961;CR11 Lagoa Santa/MG;64.796;Cerrado;13.384,4;86.492,0;183,8;14.581,2;8.554,8;453,1;6.279,7
+0000.00.2633;PARNA da Furna Feia;PARNA;Parque;proteção integral;2012;CR6 Cabedelo/PB;8.518;Caatinga;;;;;;;
+0000.00.0140;PARNA da Lagoa do Peixe;PARNA;Parque;proteção integral;1986;CR9 Florianópolis/SC;36.722;Pampas;;69,6;;;;;
+0000.00.0141;PARNA da Restinga de Jurubatiba;PARNA;Parque;proteção integral;1998;CR8 Rio de Janeiro/RJ;14.867;Mata Atlântica;;;;;;;
+0000.00.0142;PARNA da Serra da Bocaina;PARNA;Parque;proteção integral;1971;CR8 Rio de Janeiro/RJ;104.046;Mata Atlântica;;1.012,0;;;;;
+0000.00.0143;PARNA da Serra da Bodoquena;PARNA;Parque;proteção integral;2000;CR10 Cuiabá/MT;77.022;Cerrado;;;;;;;
+0000.00.0144;PARNA da Serra da Canastra;PARNA;Parque;proteção integral;1972;CR11 Lagoa Santa/MG;197.812;Cerrado;44.544,0;50.598,5;91.519,9;36.937,4;92.584,6;12.548,2;88.365,5
+0000.00.0145;PARNA da Serra da Capivara;PARNA;Parque;proteção integral;1979;CR5 Parnaíba/PI;100.764;Caatinga;;;;;;;
+0000.00.0188;PARNA da Serra da Cutia;PARNA;Parque;proteção integral;2001;CR1 Porto Velho/RO;283.503;Amazônia;;;2.474,1;;;;
+0000.00.0146;PARNA da Serra das Confusões;PARNA;Parque;proteção integral;1998;CR5 Parnaíba/PI;823.855;Caatinga;22.306,6;6.560,4;3.965,5;73.486,6;;11.092,1;
+0000.00.1909;PARNA da Serra das Lontras;PARNA;Parque;proteção integral;2010;CR7 Porto Seguro/BA;11.344;Mata Atlântica;;;;;;;
+0000.00.0148;PARNA da Serra do Cipó;PARNA;Parque;proteção integral;1984;CR11 Lagoa Santa/MG;31.640;Cerrado;;614,0;1.288,2;7.547,8;7.505,7;;6.649,1
+0000.00.0149;PARNA da Serra do Divisor;PARNA;Parque;proteção integral;1989;CR1 Porto Velho/RO;837.560;Amazônia;;;;;;;
+0000.00.3136;PARNA da Serra do Gandarela;PARNA;Parque;proteção integral;2014;CR11 Lagoa Santa/MG;31.284;Mata Atlântica;516,4;44,3;;470,7;;;
+0000.00.0150;PARNA da Serra do Itajaí;PARNA;Parque;proteção integral;2004;CR9 Florianópolis/SC;57.375;Mata Atlântica;;;;;;;
+0000.00.0151;PARNA da Serra do Pardo;PARNA;Parque;proteção integral;2005;CR3 Santarém/PA;445.413;Amazônia;;2.304,9;;;;;
+0000.00.0152;PARNA da Serra dos Órgãos;PARNA;Parque;proteção integral;1939;CR8 Rio de Janeiro/RJ;20.021;Mata Atlântica;64,6;;;;;;
+0000.00.0153;PARNA da Serra Geral;PARNA;Parque;proteção integral;1992;CR9 Florianópolis/SC;17.302;Mata Atlântica;;21,5;198,2;;;;
+0000.00.0154;PARNA da Tijuca;PARNA;Parque;proteção integral;1961;CR8 Rio de Janeiro/RJ;3.959;Mata Atlântica;;4,9;;;;;
+0000.00.0262;PARNA das Araucárias;PARNA;Parque;proteção integral;2005;CR9 Florianópolis/SC;12.810;Mata Atlântica;;;;;;;
+0000.00.0155;PARNA das Emas;PARNA;Parque;proteção integral;1961;CR10 Cuiabá/MT;132.643;Cerrado;4.491,2;16.316,4;26.217,1;37.394,5;2.298,8;854,5;10.136,9
+0000.00.0156;PARNA das Nascentes do Rio Parnaíba;PARNA;Parque;proteção integral;2002;CR5 Parnaíba/PI;724.334;Cerrado;84.336,8;144.402,1;171.540,8;226.328,2;149.041,6;163.208,5;153.878,6
+0000.00.0157;PARNA das Sempre-Vivas;PARNA;Parque;proteção integral;2002;CR11 Lagoa Santa/MG;124.156;Cerrado;311,4;;4.052,0;3.991,2;2.216,2;;
+0000.00.0049;PARNA de Anavilhanas;PARNA;Parque;proteção integral;1981;CR2 Manaus/AM;340.835;Amazônia;;;;;;;
+0000.00.0158;PARNA de Aparados da Serra;PARNA;Parque;proteção integral;1959;CR9 Florianópolis/SC;13.148;Mata Atlântica;;855,6;289,0;;;;
+0000.00.1908;PARNA de Boa Nova;PARNA;Parque;proteção integral;2010;CR7 Porto Seguro/BA;12.065;Mata Atlântica;;41,1;;;;;
+0000.00.0159;PARNA de Brasília;PARNA;Parque;proteção integral;1961;CR11 Lagoa Santa/MG;42.356;Cerrado;;6.288,8;3.005,2;241,3;2.393,9;;
+0000.00.0160;PARNA de Caparaó;PARNA;Parque;proteção integral;1961;CR11 Lagoa Santa/MG;31.763;Mata Atlântica;;180,8;;;;;710,4
+0000.00.0161;PARNA de Ilha Grande;PARNA;Parque;proteção integral;1997;CR9 Florianópolis/SC;76.079;Mata Atlântica;;35.451,0;;9.662,5;10.720,5;;17.689,7
+0000.00.0184;PARNA de Itatiaia;PARNA;Parque;proteção integral;1937;CR8 Rio de Janeiro/RJ;28.086;Mata Atlântica;;113,4;;;;;
+0000.00.0162;PARNA de Jericoacoara;PARNA;Parque;proteção integral;2002;CR5 Parnaíba/PI;8.863;Caatinga;;;;;;;
+0000.00.0163;PARNA de Pacaás Novos;PARNA;Parque;proteção integral;1979;CR1 Porto Velho/RO;708.670;Amazônia;4.706,3;2.694,2;12.787,9;9.300,7;;4.366,8;6.127,7
+0000.00.0164;PARNA de Saint-Hilaire/Lange;PARNA;Parque;proteção integral;2001;CR9 Florianópolis/SC;25.119;Mata Atlântica;;;;;;;
+0000.00.0165;PARNA de São Joaquim;PARNA;Parque;proteção integral;1961;CR9 Florianópolis/SC;45.524;Mata Atlântica;;;3.410,2;;;157,7;
+0000.00.0166;PARNA de Sete Cidades;PARNA;Parque;proteção integral;1961;CR5 Parnaíba/PI;6.304;Caatinga;;;;;;;
+0000.00.0167;PARNA de Ubajara;PARNA;Parque;proteção integral;1959;CR5 Parnaíba/PI;6.271;Caatinga;;;;;;;
+0000.00.0171;PARNA Descobrimento;PARNA;Parque;proteção integral;1999;CR7 Porto Seguro/BA;22.694;Mata Atlântica;;;;192,0;309,2;;
+0000.00.3410;PARNA do Acari;PARNA;Parque;proteção integral;2016;CR1 Porto Velho/RO;896.407;Amazônia;;;;;;;
+0000.00.1910;PARNA do Alto Cariri;PARNA;Parque;proteção integral;2010;CR7 Porto Seguro/BA;19.238;Mata Atlântica;;;;;;;
+0000.00.0168;PARNA do Araguaia;PARNA;Parque;proteção integral;1959;CR10 Cuiabá/MT;555.524;Cerrado;138.454,9;370.465,3;305.338,0;239.066,6;216.326,7;140.009,0;277.808,4
+0000.00.3652;PARNA do Boqueirão da Onça;PARNA;Parque;Proteção Integral;2018;CR7 Porto Seguro/BA;346.908;Caatinga;3.224,4;;;;;;
+0000.00.0169;PARNA do Cabo Orange;PARNA;Parque;proteção integral;1980;CR4 Belém/PA;657.328;Amazônia;;;4.466,5;2.254,7;;;37.480,9
+0000.00.0170;PARNA do Catimbau;PARNA;Parque;proteção integral;2002;CR6 Cabedelo/PB;62.295;Caatinga;;;;;;;
+0000.00.0172;PARNA do Iguaçu;PARNA;Parque;proteção integral;1939;CR9 Florianópolis/SC;169.697;Mata Atlântica;;;;;;;
+0000.00.0267;PARNA do Jamanxim;PARNA;Parque;proteção integral;2006;CR3 Santarém/PA;859.807;Amazônia;;1.452,7;;1.378,1;;;380,1
+0000.00.0173;PARNA do Jaú;PARNA;Parque;proteção integral;1980;CR2 Manaus/AM;2.367.357;Amazônia;;;;;;;
+0000.00.0281;PARNA do Juruena;PARNA;Parque;proteção integral;2006;CR1 Porto Velho/RO;1.958.014;Amazônia;64,3;;1.063,0;;;;
+0000.00.0182;PARNA do Monte Pascoal;PARNA;Parque;proteção integral;1961;CR7 Porto Seguro/BA;22.332;Mata Atlântica;;124,0;704,0;1.128,0;386,2;;
+0000.00.0174;PARNA do Monte Roraima;PARNA;Parque;proteção integral;1989;CR2 Manaus/AM;116.749;Amazônia;;211,6;1.360,4;;;;
+0000.00.0175;PARNA do Pantanal Mato-Grossense;PARNA;Parque;proteção integral;1981;CR10 Cuiabá/MT;135.923;Pantanal;;296,0;;;;9.534,2;673,0
+0000.00.0176;PARNA do Pau Brasil;PARNA;Parque;proteção integral;1999;CR7 Porto Seguro/BA;18.935;Mata Atlântica;;;;;;;
+0000.00.0177;PARNA do Pico da Neblina;PARNA;Parque;proteção integral;1979;CR2 Manaus/AM;2.252.639;Amazônia;;;;;;;
+0000.00.0264;PARNA do Rio Novo;PARNA;Parque;proteção integral;2006;CR3 Santarém/PA;538.157;Amazônia;408,7;919,1;530,0;490,3;628,8;;
+0000.00.0178;PARNA do Superagui;PARNA;Parque;proteção integral;1989;CR9 Florianópolis/SC;33.861;Mata Atlântica;;;;;;;
+0000.00.0179;PARNA do Viruá;PARNA;Parque;proteção integral;1998;CR2 Manaus/AM;214.951;Amazônia;;;80.179,0;;;;
+0000.00.0284;PARNA dos Campos Amazônicos;PARNA;Parque;proteção integral;2006;CR1 Porto Velho/RO;961.327;Amazônia;26.933,8;14.611,9;20.221,7;4.955,0;71.153,9;442,7;9.336,5
+0000.00.3519;PARNA dos Campos Ferruginosos;PARNA;Parque;proteção integral;2017;CR4 Belém/PA;79.086;Amazônia;;7.173,1;;;;;
+0000.00.0277;PARNA dos Campos Gerais;PARNA;Parque;proteção integral;2006;CR9 Florianópolis/SC;21.299;Mata Atlântica;;77,5;;;;;
+0000.00.0180;PARNA dos Lençóis Maranhenses;PARNA;Parque;proteção integral;1981;CR5 Parnaíba/PI;156.608;Cerrado;;;;;;;
+0000.00.0183;PARNA Grande Sertão Veredas;PARNA;Parque;proteção integral;1989;CR11 Lagoa Santa/MG;230.856;Cerrado;;6.232,4;1.488,8;8.653,8;605,9;2.430,8;17.043,5
+0000.00.3137;PARNA Guaricana;PARNA;Parque;proteção integral;2014;CR9 Florianópolis/SC;49.300;Mata Atlântica;;;;;;;
+0000.00.1633;PARNA Mapinguari;PARNA;Parque;proteção integral;2008;CR1 Porto Velho/RO;1.776.929;Amazônia;2.241,4;8.530,0;21.447,8;14.039,0;;1.241,6;22.460,5
+0000.00.2874;PARNA Marinho das Ilhas dos Currais;PARNA;Parque;proteção integral;2013;CR9 Florianópolis/SC;1.360;Marinho-Costeiro;;;;;;;
+0000.00.0186;PARNA Marinho de Fernando de Noronha;PARNA;Parque;proteção integral;1988;CR6 Cabedelo/PB;10.928;Marinho-Costeiro;;;;;;;
+0000.00.0185;PARNA Marinho dos Abrolhos;PARNA;Parque;proteção integral;1983;CR7 Porto Seguro/BA;87.943;Marinho-Costeiro;;;;;;;
+0000.00.0187;PARNA Montanhas do Tumucumaque;PARNA;Parque;proteção integral;2002;CR4 Belém/PA;3.865.172;Amazônia;;;;;;;
+0000.00.1626;PARNA Nascentes do Lago Jari;PARNA;Parque;proteção integral;2008;CR2 Manaus/AM;812.753;Amazônia;;;;;;;
+0000.00.0189;PARNA Serra da Mocidade;PARNA;Parque;proteção integral;1998;CR2 Manaus/AM;359.944;Amazônia;;;13.025,0;;;;
+0000.00.0147;PARNA Serra de Itabaiana;PARNA;Parque;proteção integral;2005;CR6 Cabedelo/PB;7.999;Mata Atlântica;;;;;;549,8;
+0000.00.0218;RDS de Itatupã-Baquiá;RDS;Reserva de Desenvolvimento Sustentável;uso sustentável;2005;CR4 Belém/PA;64.442;Amazônia;;;;;;;
+0000.00.3135;RDS Nascentes Geraizeiras;RDS;Reserva de Desenvolvimento Sustentável;uso sustentável;2014;CR11 Lagoa Santa/MG;38.177;Cerrado;;;;259,0;;;
+0000.00.0191;REBIO Augusto Ruschi;REBIO;Reserva Biológica;proteção integral;1982;CR7 Porto Seguro/BA;3.562;Mata Atlântica;;;;;;;
+0000.00.2634;REBIO Bom Jesus;REBIO;Reserva Biológica;proteção integral;2012;CR9 Florianópolis/SC;34.179;Mata Atlântica;;;;;;;
+0000.00.0192;REBIO da Contagem;REBIO;Reserva Biológica;proteção integral;2002;CR11 Lagoa Santa/MG;3.426;Cerrado;;200,9;603,5;;901,4;263,5;
+0000.00.0193;REBIO da Mata Escura;REBIO;Reserva Biológica;proteção integral;2003;CR11 Lagoa Santa/MG;50.873;Mata Atlântica;443,7;;;434,9;1.487,6;;
+0000.00.0276;REBIO das Araucárias;REBIO;Reserva Biológica;proteção integral;2006;CR9 Florianópolis/SC;14.930;Mata Atlântica;;;;;;;
+0000.00.0275;REBIO das Perobas;REBIO;Reserva Biológica;proteção integral;2006;CR9 Florianópolis/SC;8.716;Mata Atlântica;;;;;;;
+0000.00.0195;REBIO de Comboios;REBIO;Reserva Biológica;proteção integral;1984;CR7 Porto Seguro/BA;785;Marinho-Costeiro;;;;;;;
+0000.00.0197;REBIO de Pedra Talhada;REBIO;Reserva Biológica;proteção integral;1989;CR6 Cabedelo/PB;4.382;Mata Atlântica;;;;;;;
+0000.00.0215;REBIO de Poço das Antas;REBIO;Reserva Biológica;proteção integral;1974;CR8 Rio de Janeiro/RJ;5.053;Mata Atlântica;;;;502,9;834,2;;
+0000.00.0198;REBIO de Saltinho;REBIO;Reserva Biológica;proteção integral;1983;CR6 Cabedelo/PB;563;Mata Atlântica;;;;;;;
+0000.00.0199;REBIO de Santa Isabel;REBIO;Reserva Biológica;proteção integral;1988;CR6 Cabedelo/PB;5.547;Marinho-Costeiro;;;;;;;
+0000.00.0200;REBIO de Serra Negra;REBIO;Reserva Biológica;proteção integral;1982;CR6 Cabedelo/PB;625;Caatinga;;;;;;;
+0000.00.0201;REBIO de Sooretama;REBIO;Reserva Biológica;proteção integral;1982;CR7 Porto Seguro/BA;27.859;Mata Atlântica;;;884,1;;;;
+0000.00.0202;REBIO de Una;REBIO;Reserva Biológica;proteção integral;1980;CR7 Porto Seguro/BA;18.515;Mata Atlântica;;;;;;;
+0000.00.0194;REBIO do Abufari;REBIO;Reserva Biológica;proteção integral;1982;CR2 Manaus/AM;223.867;Amazônia;;;;;;;
+0000.00.0203;REBIO do Atol das Rocas;REBIO;Reserva Biológica;proteção integral;1979;CR6 Cabedelo/PB;35.187;Marinho-Costeiro;;;;;;;
+0000.00.0204;REBIO do Córrego do Veado;REBIO;Reserva Biológica;proteção integral;1982;CR7 Porto Seguro/BA;2.376;Mata Atlântica;;;;;;;
+0000.00.0205;REBIO do Córrego Grande;REBIO;Reserva Biológica;proteção integral;1989;CR7 Porto Seguro/BA;1.504;Mata Atlântica;;;;;;;
+0000.00.0206;REBIO do Guaporé;REBIO;Reserva Biológica;proteção integral;1982;CR1 Porto Velho/RO;615.776;Amazônia;18.217,7;13.826,5;30.500,6;8.121,6;983,9;6.627,4;12.034,8
+0000.00.0207;REBIO do Gurupi;REBIO;Reserva Biológica;proteção integral;1988;CR4 Belém/PA;290.254;Amazônia;;266,1;;21.184,7;416,2;178,7;
+0000.00.0208;REBIO do Jaru;REBIO;Reserva Biológica;proteção integral;1979;CR1 Porto Velho/RO;346.864;Amazônia;;270,0;195,6;;521,5;;112,6
+0000.00.0209;REBIO do Lago Piratuba;REBIO;Reserva Biológica;proteção integral;1980;CR4 Belém/PA;392.475;Amazônia;231,4;242,6;;3.643,7;5.028,3;;14.056,8
+0000.00.3411;REBIO do Manicoré;REBIO;Reserva Biológica;proteção integral;2016;CR1 Porto Velho/RO;359.063;Amazônia;716,7;;;;;;
+0000.00.0210;REBIO do Rio Trombetas;REBIO;Reserva Biológica;proteção integral;1979;CR3 Santarém/PA;407.759;Amazônia;;;;;;;
+0000.00.0211;REBIO do Tapirapé;REBIO;Reserva Biológica;proteção integral;1989;CR4 Belém/PA;99.273;Amazônia;;;;;;;
+0000.00.0212;REBIO do Tinguá;REBIO;Reserva Biológica;proteção integral;1989;CR8 Rio de Janeiro/RJ;24.841;Mata Atlântica;;;;;;;
+0000.00.0213;REBIO do Uatumã;REBIO;Reserva Biológica;proteção integral;1990;CR2 Manaus/AM;938.732;Amazônia;;;;;;;
+0000.00.0196;REBIO Guaribas;REBIO;Reserva Biológica;proteção integral;1990;CR6 Cabedelo/PB;4.052;Mata Atlântica;;;;;;;
+0000.00.0214;REBIO Marinha do Arvoredo;REBIO;Reserva Biológica;proteção integral;1990;CR9 Florianópolis/SC;17.105;Marinho-Costeiro;;;;;;;
+0000.00.0216;REBIO Nascentes da Serra do Cachimbo;REBIO;Reserva Biológica;proteção integral;2005;CR3 Santarém/PA;342.196;Amazônia;2.325,5;22.049,3;2.271,0;2.021,4;889,0;;3.892,4
+0000.00.0217;REBIO União;REBIO;Reserva Biológica;proteção integral;1998;CR8 Rio de Janeiro/RJ;2.923;Mata Atlântica;;;;;;;
+0000.00.1563;RESEX Acaú-Goiana;RESEX;Reserva Extrativista;uso sustentável;2007;CR6 Cabedelo/PB;6.677;Mata Atlântica;;;;;;;
+0000.00.0274;RESEX Alto Tarauacá;RESEX;Reserva Extrativista;uso sustentável;2000;CR1 Porto Velho/RO;150.924;Amazônia;;;;;;;
+0000.00.0285;RESEX Arapixi;RESEX;Reserva Extrativista;uso sustentável;2006;CR1 Porto Velho/RO;133.712;Amazônia;113,5;;;;;;
+0000.00.0273;RESEX Arióca Pruanã;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;83.817;Amazônia;;;;;;;
+0000.00.0220;RESEX Auatí-Paraná;RESEX;Reserva Extrativista;uso sustentável;2001;CR2 Manaus/AM;146.949;Amazônia;;;;;;;
+0000.00.0221;RESEX Barreiro das Antas;RESEX;Reserva Extrativista;uso sustentável;2001;CR1 Porto Velho/RO;106.199;Amazônia;;;;;;;
+0000.00.1564;RESEX Chapada Limpa;RESEX;Reserva Extrativista;uso sustentável;2007;CR5 Parnaíba/PI;11.973;Cerrado;;91,4;;1.911,3;;;2.100,0
+0000.00.0222;RESEX Chico Mendes;RESEX;Reserva Extrativista;uso sustentável;1990;CR1 Porto Velho/RO;931.543;Amazônia;;288,1;1.737,0;;;;
+0000.00.0223;RESEX Chocoaré-Mato Grosso;RESEX;Reserva Extrativista;uso sustentável;2002;CR4 Belém/PA;2.783;Amazônia;;;;;;;
+0000.00.0226;RESEX da Mata Grande;RESEX;Reserva Extrativista;uso sustentável;1992;CR4 Belém/PA;11.432;Cerrado;;;;;;;
+0000.00.0253;RESEX de Canavieiras;RESEX;Reserva Extrativista;uso sustentável;2006;CR7 Porto Seguro/BA;100.728;Mata Atlântica;;126,9;;848,7;;;
+0000.00.1808;RESEX de Cassurubá;RESEX;Reserva Extrativista;uso sustentável;2009;CR7 Porto Seguro/BA;100.578;Mata Atlântica;;;;;;;
+0000.00.0279;RESEX de Cururupu;RESEX;Reserva Extrativista;uso sustentável;2004;CR4 Belém/PA;186.057;Amazônia;;;;;;;
+0000.00.0286;RESEX de Recanto das Araras de Terra Ronca;RESEX;Reserva Extrativista;uso sustentável;2006;CR11 Lagoa Santa/MG;12.349;Cerrado;5.763,3;;1.639,3;6.630,8;;1.628,5;1.680,1
+0000.00.0228;RESEX de São João da Ponta;RESEX;Reserva Extrativista;uso sustentável;2002;CR4 Belém/PA;3.409;Amazônia;;;;;;;
+0000.00.1517;RESEX do Alto Juruá;RESEX;Reserva Extrativista;uso sustentável;1990;CR1 Porto Velho/RO;537.949;Amazônia;;;;;;;
+0000.00.0230;RESEX do Baixo Juruá;RESEX;Reserva Extrativista;uso sustentável;2001;CR2 Manaus/AM;178.039;Amazônia;;;;;;;
+0000.00.0231;RESEX do Batoque;RESEX;Reserva Extrativista;uso sustentável;2003;CR6 Cabedelo/PB;601;Caatinga;;;;;;;
+0000.00.0232;RESEX do Cazumbá-Iracema;RESEX;Reserva Extrativista;uso sustentável;2002;CR1 Porto Velho/RO;750.922;Amazônia;;;;;;;
+0000.00.1519;RESEX do Ciriaco;RESEX;Reserva Extrativista;uso sustentável;1992;CR4 Belém/PA;8.107;Amazônia;;;;;;;
+0000.00.0240;RESEX do Extremo Norte do Tocantins;RESEX;Reserva Extrativista;uso sustentável;1992;CR4 Belém/PA;9.071;Cerrado;;111,7;;;;;
+0000.00.0242;RESEX do Lago do Capanã Grande;RESEX;Reserva Extrativista;uso sustentável;2004;CR2 Manaus/AM;304.313;Amazônia;;;186,4;;;;
+0000.00.0233;RESEX do Lago do Cuniã;RESEX;Reserva Extrativista;uso sustentável;1999;CR1 Porto Velho/RO;50.604;Amazônia;;;;;;;
+0000.00.0234;RESEX do Mandira;RESEX;Reserva Extrativista;uso sustentável;2002;CR8 Rio de Janeiro/RJ;1.178;Mata Atlântica;;;;;;;
+0000.00.0235;RESEX do Médio Juruá;RESEX;Reserva Extrativista;uso sustentável;1997;CR2 Manaus/AM;286.933;Amazônia;;;;;;;
+0000.00.1606;RESEX do Médio Purus;RESEX;Reserva Extrativista;uso sustentável;2008;CR1 Porto Velho/RO;604.236;Amazônia;;;;;;;
+0000.00.1520;RESEX do Quilombo Flexal;RESEX;Reserva Extrativista;uso sustentável;1992;CR4 Belém/PA;9.338;Amazônia;;;;;;;
+0000.00.1518;RESEX do Rio Cajari;RESEX;Reserva Extrativista;uso sustentável;1990;CR4 Belém/PA;532.405;Amazônia;3.218,5;;19.531,7;27.080,1;;;
+0000.00.0238;RESEX do Rio do Cautário;RESEX;Reserva Extrativista;uso sustentável;2001;CR1 Porto Velho/RO;75.125;Amazônia;;;;;;;
+0000.00.0239;RESEX do Rio Jutaí;RESEX;Reserva Extrativista;uso sustentável;2002;CR2 Manaus/AM;275.516;Amazônia;;;;;;;
+0000.00.0256;RESEX do Rio Ouro Preto;RESEX;Reserva Extrativista;uso sustentável;1990;CR1 Porto Velho/RO;204.633;Amazônia;;712,1;324,0;;;;
+0000.00.0288;RESEX Gurupá-Melgaço;RESEX;Reserva Extrativista;uso sustentável;2006;CR4 Belém/PA;145.574;Amazônia;;;;;;;
+0000.00.0241;RESEX Ipaú-Anilzinho;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;55.835;Amazônia;;81,3;;;;;
+0000.00.1628;RESEX Ituxí;RESEX;Reserva Extrativista;uso sustentável;2008;CR1 Porto Velho/RO;776.330;Amazônia;;;;;;;
+0000.00.0287;RESEX Lago do Cedro;RESEX;Reserva Extrativista;uso sustentável;2006;CR10 Cuiabá/MT;17.404;Cerrado;;;;;;;
+0000.00.0243;RESEX Mãe Grande de Curuça;RESEX;Reserva Extrativista;uso sustentável;2002;CR4 Belém/PA;36.679;Amazônia;;;;;;;
+0000.00.0244;RESEX Mapuá;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;93.748;Amazônia;;;;;;;
+0000.00.0227;RESEX Maracanã;RESEX;Reserva Extrativista;uso sustentável;2002;CR4 Belém/PA;30.180;Amazônia;;;;;;;
+0000.00.0247;RESEX Marinha AraÍ-Peroba;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;50.555;Amazônia;;;;;;;
+0000.00.0248;RESEX Marinha Caeté-Taperaçu;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;42.490;Amazônia;;;;;;;
+0000.00.3134;RESEX Marinha Cuinarana;RESEX;Reserva Extrativista;uso sustentável;2014;CR4 Belém/PA;11.037;Marinho-Costeiro;;;;;;;
+0000.00.0245;RESEX Marinha da Baia de Iguape;RESEX;Reserva Extrativista;uso sustentável;2000;CR7 Porto Seguro/BA;10.083;Marinho-Costeiro;;;;;;;
+0000.00.0246;RESEX Marinha da Lagoa do Jequiá;RESEX;Reserva Extrativista;uso sustentável;2001;CR6 Cabedelo/PB;10.204;Mata Atlântica;;;;;;;
+0000.00.0249;RESEX Marinha de Gurupi-Piriá;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;72.790;Amazônia;;;;;;;
+0000.00.0254;RESEX Marinha de Soure;RESEX;Reserva Extrativista;uso sustentável;2001;CR4 Belém/PA;29.579;Amazônia;;;;;;;
+0000.00.0251;RESEX Marinha do Arraial do Cabo;RESEX;Reserva Extrativista;uso sustentável;1997;CR8 Rio de Janeiro/RJ;51.677;Mata Atlântica;;;;;;;
+0000.00.0252;RESEX Marinha do Corumbau;RESEX;Reserva Extrativista;uso sustentável;2000;CR7 Porto Seguro/BA;89.598;Marinho-Costeiro;;;;;;;
+0000.00.0225;RESEX Marinha do Delta do Parnaíba;RESEX;Reserva Extrativista;uso sustentável;2000;CR5 Parnaíba/PI;27.022;Cerrado;;63,6;;;;;
+0000.00.3133;RESEX Marinha Mestre Lucindo;RESEX;Reserva Extrativista;uso sustentável;2014;CR4 Belém/PA;26.465;Marinho-Costeiro;;;;;;;
+0000.00.3132;RESEX Marinha Mocapajuba;RESEX;Reserva Extrativista;uso sustentável;2014;CR4 Belém/PA;21.029;Marinho-Costeiro;;;;;;;
+0000.00.0255;RESEX Marinha Pirajubaé;RESEX;Reserva Extrativista;uso sustentável;1992;CR9 Florianópolis/SC;1.712;Marinho-Costeiro;;;;;;;
+0000.00.0250;RESEX Marinha Tracuateua;RESEX;Reserva Extrativista;uso sustentável;2005;CR4 Belém/PA;27.865;Amazônia;;;;;;;
+0000.00.1809;RESEX Prainha do Canto Verde;RESEX;Reserva Extrativista;uso sustentável;2009;CR6 Cabedelo/PB;29.805;Marinho-Costeiro;;;;;;;
+0000.00.1810;RESEX Renascer;RESEX;Reserva Extrativista;uso sustentável;2009;CR3 Santarém/PA;209.667;Amazônia;;;;372,5;;;294,6
+0000.00.0280;RESEX Rio Iriri;RESEX;Reserva Extrativista;uso sustentável;2006;CR3 Santarém/PA;398.998;Amazônia;;;;;;;
+0000.00.0283;RESEX Rio Unini;RESEX;Reserva Extrativista;uso sustentável;2006;CR2 Manaus/AM;849.693;Amazônia;;;;;;;
+0000.00.1635;RESEX Rio Xingu;RESEX;Reserva Extrativista;uso sustentável;2008;CR3 Santarém/PA;303.005;Amazônia;;;;;;;
+0000.00.0257;RESEX Riozinho da Liberdade;RESEX;Reserva Extrativista;uso sustentável;2005;CR1 Porto Velho/RO;324.906;Amazônia;;;;;;;
+0000.00.0258;RESEX Riozinho do Anfrísio;RESEX;Reserva Extrativista;uso sustentável;2004;CR3 Santarém/PA;736.144;Amazônia;;;;;;;
+0000.00.0259;RESEX Tapajós-Arapiuns;RESEX;Reserva Extrativista;uso sustentável;1998;CR3 Santarém/PA;677.521;Amazônia;;19,9;;;;;
+0000.00.0282;RESEX Terra Grande-Pracuuba;RESEX;Reserva Extrativista;uso sustentável;2006;CR4 Belém/PA;194.870;Amazônia;;;;;;;
+0000.00.0260;RESEX Verde Para Sempre;RESEX;Reserva Extrativista;uso sustentável;2004;CR3 Santarém/PA;1.289.380;Amazônia;;;22.933,5;699,0;;;1.397,4
+0000.00.0219;REVIS das Veredas do Oeste Baiano;RVS;Refúgio de Vida Silvestre;proteção integral;2002;CR11 Lagoa Santa/MG;128.051;Cerrado;321,2;39.767,4;4.695,4;11.236,4;49.071,5;2.638,9;99,3
+0000.00.1907;REVIS de Boa Nova;RVS;Refúgio de Vida Silvestre;proteção integral;2010;CR7 Porto Seguro/BA;15.024;Mata Atlântica;;96,5;;;;;
+0000.00.1911;REVIS de Santa Cruz;RVS;Refúgio de Vida Silvestre;proteção integral;2010;CR7 Porto Seguro/BA;17.710;Marinho-Costeiro;;;;;;;
+0000.00.1880;REVIS de Una;RVS;Refúgio de Vida Silvestre;proteção integral;2007;CR7 Porto Seguro/BA;23.424;Mata Atlântica;;;;;;;
+0000.00.3432;REVIS do Arquipélago de Alcatrazes;RVS;Refúgio de Vida Silvestre;proteção integral;2016;CR8 Rio de Janeiro/RJ;67.364;Marinho-Costeiro;;;;;;;
+0000.00.1813;REVIS do Rio dos Frades;RVS;Refúgio de Vida Silvestre;proteção integral;2007;CR7 Porto Seguro/BA;899;Mata Atlântica;;;;;;;
+0000.00.0278;REVIS dos Campos de Palmas;RVS;Refúgio de Vida Silvestre;proteção integral;2006;CR9 Florianópolis/SC;16.594;Mata Atlântica;;109,5;3.249,5;;;;
+0000.00.0190;REVIS Ilha dos Lobos;RVS;Refúgio de Vida Silvestre;proteção integral;2005;CR9 Florianópolis/SC;142;Marinho-Costeiro;;;;;;;
