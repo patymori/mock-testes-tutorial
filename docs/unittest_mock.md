@@ -31,6 +31,15 @@ conta.obtem_status = mock.Mock(return_value="Paga")
 conta.obtem_status()
 ```
 
+
+### Mock.return_value
+ * Permite definir o retorno __fixo__ de:
+   * uma chamada de função ou método
+   * de uma instanciação de classe
+   * de um atributo
+   * de uma propriedade
+
+
 ## Classe _MagicMock()_
  * Subclasse de _Mock_, com o mesmo construtor
  * Todos os _magic methods_ são pré-criados e prontos para uso. Consulte a documentação para saber os valores de retorno padrão de cada método mágico.
@@ -66,9 +75,7 @@ class TestExecute(TestCase):
     def test_get_csvfile_from_urllink_in_config(self):
         self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
 
-
-if __name__ == '__main__':
-    main()
+[...]
 ```
 
 Estamos usando primeiro o _patch_ em um context manager, o que garante que somente neste momento o _urlopen_ do _core.app_ será substituído.
@@ -132,19 +139,138 @@ class TestExecute(TestCase):
     def test_get_csvfile_from_urllink_in_config(self):
         self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
 
-
-if __name__ == '__main__':
-    main()
+[...]
 ```
 
+Ou ainda criar um _patcher_, usando o `start()` e `stop()`:
 
-### Mock.return_value
- * Permite definir o retorno __fixo__ de:
-   * uma chamada de função ou método
-   * de uma instanciação de classe
-   * de um atributo
-   * de uma propriedade
+```python
+[...]
 
+class TestExecute(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.mock_urlopen_patcher = mock.patch('core.app.urlopen')
+        cls.mock_urlopen = cls.mock_urlopen_patcher.start()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.mock_urlopen_patcher.stop()
+
+    def setUp(self):
+        self.result = app.execute()
+  [...]
+    def test_get_csvfile_from_urllink_in_config(self):
+        self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
+
+[...]
+```
+
+## Problema: salvar o arquivo CSV baixado
+
+O `execute()` deverá salvar o arquivo CSV baixado em disco. Para isso, podemos:
+
+ * Abrir um arquivo em modo escrita
+ * Escrever o conteúdo recebido no arquivo
+
+ ```python
+ [...]
+
+ class TestExecute(TestCase):
+     @classmethod
+     def setUpClass(cls):
+         [...]
+         cls.mock_file = mock.Mock(name="MockCsvfile", spec_set=io.StringIO)
+         file_handler = mock.MagicMock()
+         file_handler.__enter__.return_value = cls.mock_file
+         file_handler.__exit__.return_value = False
+         cls.mock_open_patcher = mock.patch('builtins.open', spec=open)
+         cls.mock_open = cls.mock_open_patcher.start()
+         cls.mock_open.return_value = file_handler
+
+     @classmethod
+     def tearDownClass(cls):
+        [...]
+        cls.mock_open_patcher.stop()
+
+     def setUp(self):
+         self.result = app.execute()
+
+    [...]
+
+     def test_open_cvsfile_in_write_mode(self):
+         self.mock_open.assert_called_with("dados_incendios_cf.csv", "w")
+
+     def test_write_csvfile_content(self):
+         self.mock_file.write.assert_called_with(self.mock_urlopen())
+
+ [...]
+ ```
+
+Rodando os testes, devem ocorrer os erros:
+
+```bash
+======================================================================
+FAIL: test_open_cvsfile_in_write_mode (tests.test_app.TestExecuteOK)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+ File "my_project/tests/test_app.py", line 37, in test_open_cvsfile_in_write_mode
+   self.mock_open.assert_called_with("dados_incendios_cf.csv", "w")
+ File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 825, in assert_called_with
+   raise AssertionError('Expected call: %s\nNot called' % (expected,))
+AssertionError: Expected call: open('dados_incendios_cf.csv', 'w')
+Not called
+
+======================================================================
+FAIL: test_write_csvfile_content (tests.test_app.TestExecuteOK)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+ File "my_project/tests/test_app.py", line 40, in test_write_csvfile_content
+   self.mock_file.write.assert_called_with(self.mock_urlopen())
+ File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 825, in assert_called_with
+   raise AssertionError('Expected call: %s\nNot called' % (expected,))
+AssertionError: Expected call: write(<MagicMock name='urlopen()' id='140481532837584'>)
+Not called
+
+----------------------------------------------------------------------
+
+```
+
+E agora é implementar para o teste passar:
+
+```python
+
+[...]
+
+def execute():
+
+    [...]
+    with open("dados_incendios_cf.csv", "w") as csvfile:
+        csvfile.write(response)
+
+    return msg
+
+ ```
+
+Agora os testes devem passar.
+
+```bash
+test_get_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
+test_open_cvsfile_in_write_mode (tests.test_app.TestExecuteOK) ... ok
+test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
+test_write_csvfile_content (tests.test_app.TestExecuteOK) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.007s
+
+OK
+```
+
+### Mock.side_effect
+ * Permite definir um comportamento ao chamar um objeto, que pode ser:
+   * o lançamento de uma exceção
+   * retornos diferentes a cada chamada, através da definição de uma lista (ou tupla)
+   * uma função a ser executada
 
 ###
 
@@ -153,7 +279,6 @@ if __name__ == '__main__':
 
 
 ### Mock spec e spec_set
-### Mock.side_effect
 ### Mock wraps
 
 ## configure_mock
