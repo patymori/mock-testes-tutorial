@@ -59,7 +59,7 @@ E como vou saber se o urlopen foi executado corretamente, passando a URL certa?
 ### _mock.patch(target, new=DEFAULT, **kwargs)_
 
  * Pode ser usado decorando uma método de teste, uma classe de teste ou em um context manager
- * O _target_ deve ser uma string com o "caminho do objeto". Ex: 'package.module.ClassName'
+ * O _target_ deve ser uma string com o caminho de import do módulo/objeto. Ex: 'package.module.ClassName'
  * Se _new_ não é informado, o objeto _target_ é substituído com um _MagicMock_
 
 Então, vamos ao `test_app.py`
@@ -72,7 +72,7 @@ class TestExecute(TestCase):
         with mock.patch('core.app.urlopen') as self.mock_urlopen:
             self.result = app.execute()
   [...]
-    def test_get_csvfile_from_urllink_in_config(self):
+    def test_gets_csvfile_from_urllink_in_config(self):
         self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
 
 [...]
@@ -84,10 +84,10 @@ Rode o teste e corrija os erros até que a falha ocorra:
 
 ```bash
 ======================================================================
-FAIL: test_get_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK)
+FAIL: test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "my_project/tests/test_app.py", line 16, in test_get_csvfile_from_urllink_in_config
+  File "my_project/tests/test_app.py", line 16, in test_gets_csvfile_from_urllink_in_config
     self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
   File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 844, in assert_called_once_with
     raise AssertionError(msg)
@@ -116,7 +116,7 @@ def execute():
 Rodando os testes novamente, não deve haver mais falhas.
 
 ```bash
-test_get_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
+test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
 test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
 
 ----------------------------------------------------------------------
@@ -136,7 +136,7 @@ class TestExecute(TestCase):
         self.mock_urlopen = mock_urlopen
         self.result = app.execute()
   [...]
-    def test_get_csvfile_from_urllink_in_config(self):
+    def test_gets_csvfile_from_urllink_in_config(self):
         self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
 
 [...]
@@ -160,7 +160,7 @@ class TestExecute(TestCase):
     def setUp(self):
         self.result = app.execute()
   [...]
-    def test_get_csvfile_from_urllink_in_config(self):
+    def test_gets_csvfile_from_urllink_in_config(self):
         self.mock_urlopen.assert_called_once_with(config.INCENDIOS_CSV_FILE_LINK)
 
 [...]
@@ -170,63 +170,83 @@ class TestExecute(TestCase):
 
 O `execute()` deverá salvar o arquivo CSV baixado em disco. Para isso, podemos:
 
- * Abrir um arquivo em modo escrita
+ * Abrir um arquivo
  * Escrever o conteúdo recebido no arquivo
 
- ```python
- [...]
+ Vamos utilizar aqui `pathlib` para manipular o arquivo CSV. Nesta implementação, vamos usar especificamente `pathlib.Path`.
 
- class TestExecute(TestCase):
-     @classmethod
-     def setUpClass(cls):
-         [...]
-         cls.mock_file = mock.Mock(name="MockCsvfile", spec_set=io.StringIO)
-         file_handler = mock.MagicMock()
-         file_handler.__enter__.return_value = cls.mock_file
-         file_handler.__exit__.return_value = False
-         cls.mock_open_patcher = mock.patch('builtins.open', spec=open)
-         cls.mock_open = cls.mock_open_patcher.start()
-         cls.mock_open.return_value = file_handler
+```python
+[...]
 
-     @classmethod
-     def tearDownClass(cls):
+class TestExecute(TestCase):
+    @classmethod
+    def setUpClass(cls):
         [...]
-        cls.mock_open_patcher.stop()
+        cls.mock_path_patcher = mock.patch.object(
+            app.pathlib, 'Path', spec=app.pathlib.Path, name="MockPath"
+        )
+        cls.mock_path = cls.mock_path_patcher.start()
 
-     def setUp(self):
-         self.result = app.execute()
+    @classmethod
+    def tearDownClass(cls):
+        [...]
+        cls.mock_path_patcher.stop()
+
+    def setUp(self):
+        self.result = app.execute()
 
     [...]
 
-     def test_open_cvsfile_in_write_mode(self):
-         self.mock_open.assert_called_with("dados_incendios_cf.csv", "w")
+    def test_creates_path_to_csvfile(self):
+        self.mock_path.assert_called_with("dados_incendios_cf.csv")
 
-     def test_write_csvfile_content(self):
-         self.mock_file.write.assert_called_with(self.mock_urlopen())
+    def test_writes_csvfile_content(self):
+        self.mock_path.return_value.write_text.assert_called_with(self.mock_urlopen())
 
- [...]
- ```
+[...]
+```
+
+
+### _mock.patch.object(target, attribute, new=DEFAULT, **kwargs)_
+
+Pode ser usado decorando uma método de teste, uma classe de teste ou em um context manager
+
+O _target_ deve ser o caminho de import do módulo que contém o objeto a ser simulado. Atenção aqui que este caminho não é uma string!
+
+O _attribute_ deve ser uma string com o nome do módulo/objeto a ser simulado
+
+Se _new_ não é informado, o _attribute_ é substituído com um _MagicMock_
+
+
+### _Mock spec e spec_set_
+
+#### _spec_
+
+O _spec_ é um argumento na definição de um dublê de teste. Pode ser uma lista de strins ou um objeto existente (uma classe ou instancia) que atua como a especificação para o dublê. Se um objeto é passado, então uma lista de strings é formada pela chamada do _dir()_ do objeto, excluindo os atributos e métodos mágicos não suportados. Acessando qualquer atributo ou método que não estiver na lista resultará na exceção _AttributeError_.
+
+Um outro detalhe é que usando o _spec_ com um objeto, o atributo mágico *\_\_class\_\_* retorna a classe definida no _spec_. Isso permite que, por exemplo, a função _isinstance()_ funcione.
+
 
 Rodando os testes, devem ocorrer os erros:
 
 ```bash
 ======================================================================
-FAIL: test_open_cvsfile_in_write_mode (tests.test_app.TestExecuteOK)
+FAIL: test_creates_path_to_csvfile (tests.test_app.TestExecuteOK)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
- File "my_project/tests/test_app.py", line 37, in test_open_cvsfile_in_write_mode
-   self.mock_open.assert_called_with("dados_incendios_cf.csv", "w")
+ File "my_project/tests/test_app.py", line 37, in test_creates_path_to_csvfile
+   self.mock_path.assert_called_with("dados_incendios_cf.csv")
  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 825, in assert_called_with
    raise AssertionError('Expected call: %s\nNot called' % (expected,))
-AssertionError: Expected call: open('dados_incendios_cf.csv', 'w')
+AssertionError: Expected call: open('dados_incendios_cf.csv')
 Not called
 
 ======================================================================
-FAIL: test_write_csvfile_content (tests.test_app.TestExecuteOK)
+FAIL: test_writes_csvfile_content (tests.test_app.TestExecuteOK)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
- File "my_project/tests/test_app.py", line 40, in test_write_csvfile_content
-   self.mock_file.write.assert_called_with(self.mock_urlopen())
+ File "my_project/tests/test_app.py", line 40, in test_writes_csvfile_content
+   self.mock_path.return_value.write_text.assert_called_with(self.mock_urlopen())
  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 825, in assert_called_with
    raise AssertionError('Expected call: %s\nNot called' % (expected,))
 AssertionError: Expected call: write(<MagicMock name='urlopen()' id='140481532837584'>)
@@ -245,9 +265,8 @@ E agora é implementar para o teste passar:
 def execute():
 
     [...]
-    with open("dados_incendios_cf.csv", "w") as csvfile:
-        csvfile.write(response)
-
+    csvfile = pathlib.Path("dados_incendios_cf.csv")
+    csvfile.write_text(response)
     return msg
 
  ```
@@ -255,10 +274,10 @@ def execute():
 Agora os testes devem passar.
 
 ```bash
-test_get_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
-test_open_cvsfile_in_write_mode (tests.test_app.TestExecuteOK) ... ok
+test_creates_path_to_csvfile (tests.test_app.TestExecuteOK) ... ok
+test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
 test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
-test_write_csvfile_content (tests.test_app.TestExecuteOK) ... ok
+test_writes_csvfile_content (tests.test_app.TestExecuteOK) ... ok
 
 ----------------------------------------------------------------------
 Ran 4 tests in 0.007s
@@ -275,10 +294,6 @@ OK
 ###
 
 
-### mock.patch(target, new=DEFAULT, spec=None, create=False, spec_set=None, autospec=None, new_callable=None)
-
-
-### Mock spec e spec_set
 ### Mock wraps
 
 ## configure_mock
