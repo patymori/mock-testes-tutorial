@@ -1,5 +1,6 @@
 import io
 import json
+import urllib
 from unittest import TestCase, main, mock
 
 from core import app, config
@@ -35,6 +36,23 @@ class TestExecuteOK(TestCase):
 
     def test_writes_csvfile_content(self):
         self.mock_path.return_value.write_text.assert_called_with(self.mock_urlopen())
+
+
+class TestExecuteErrors(TestCase):
+    @mock.patch('core.app.urlopen')
+    @mock.patch('core.app.pathlib.Path')
+    def test_url_does_not_exist_should_not_create_path(self, MockPath, mock_urlopen):
+        mock_urlopen.side_effect = urllib.error.URLError(
+          "[Errno -2] Name or service not known"
+        )
+
+        self.result = app.execute()
+
+        self.assertEqual(
+          self.result,
+          "Could not get CSV file: <urlopen error [Errno -2] Name or service not known>"
+        )
+        MockPath.assert_not_called()
 
 
 if __name__ == '__main__':
