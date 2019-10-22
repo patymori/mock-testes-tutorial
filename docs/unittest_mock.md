@@ -67,7 +67,7 @@ Então, vamos ao `test_app.py`
 ```python
 [...]
 
-class TestExecute(TestCase):
+class TestExecuteOK(TestCase):
     def setUp(self):
         with mock.patch('core.app.urlopen') as self.mock_urlopen:
             self.result = app.execute()
@@ -130,7 +130,7 @@ Neste nosso exemplo, também poderíamos usar o _patch_ como decorador:
 ```python
 [...]
 
-class TestExecute(TestCase):
+class TestExecuteOK(TestCase):
     @mock.patch('core.app.urlopen')
     def setUp(self, mock_urlopen):
         self.mock_urlopen = mock_urlopen
@@ -147,7 +147,7 @@ Ou ainda criar um _patcher_, usando o `start()` e `stop()`:
 ```python
 [...]
 
-class TestExecute(TestCase):
+class TestExecuteOK(TestCase):
     @classmethod
     def setUpClass(cls):
         cls.mock_urlopen_patcher = mock.patch('core.app.urlopen')
@@ -173,12 +173,12 @@ O `execute()` deverá salvar o arquivo CSV baixado em disco. Para isso, podemos:
  * Abrir um arquivo
  * Escrever o conteúdo recebido no arquivo
 
- Vamos utilizar aqui `pathlib` para manipular o arquivo CSV. Nesta implementação, vamos usar especificamente `pathlib.Path`.
+Vamos utilizar aqui `pathlib` para manipular o arquivo CSV. Nesta implementação, vamos usar especificamente `pathlib.Path`.
 
 ```python
 [...]
 
-class TestExecute(TestCase):
+class TestExecuteOK(TestCase):
     @classmethod
     def setUpClass(cls):
         [...]
@@ -285,13 +285,106 @@ Ran 4 tests in 0.007s
 OK
 ```
 
-### Mock.side_effect
- * Permite definir um comportamento ao chamar um objeto, que pode ser:
-   * o lançamento de uma exceção
-   * retornos diferentes a cada chamada, através da definição de uma lista (ou tupla)
-   * uma função a ser executada
 
-###
+## Problema: arquivo CSV indisponível
+
+O `execute()` deverá salvar o arquivo CSV somente se conseguir recebê-lo. Então, para que a aplicação informe corretamente que o CSV está indisponível, é necessário verificar a resposta HTTP. Vamos então:
+
+ * Ao fazer a requisição HTTP do arquivo CSV do link, verificar se ocorre erro
+ * Se ocorrer erro, exibir mensagem com detalhes do problema e não tentar gravar o arquivo
+
+E como é possível simular um erro, uma exceção?
+
+
+### Mock.side_effect
+Permite definir um comportamento ao chamar um objeto, que pode ser:
+ * o lançamento de uma exceção
+ * retornos diferentes a cada chamada, através da definição de uma lista (ou tupla)
+ * uma função a ser executada
+
+
+Então vamos ao teste:
+
+```python
+[...]
+
+class TestExecuteErrors(TestCase):
+    @mock.patch('core.app.urlopen')
+    @mock.patch('core.app.pathlib.Path')
+    def test_url_does_not_exist_should_not_create_path(self, MockPath, mock_urlopen):
+        mock_urlopen.side_effect = urllib.error.URLError(
+          "[Errno -2] Name or service not known"
+        )
+
+        self.result = app.execute()
+
+        self.assertEqual(
+          self.result,
+          "Could not get CSV file: <urlopen error [Errno -2] Name or service not known>"
+        )
+        MockPath.assert_not_called()
+
+[...]
+```
+
+Rodando os testes, o seguinte erro deve ser apresentado:
+
+```bash
+======================================================================
+ERROR: test_url_does_not_exist_should_not_create_path (tests.test_app.TestExecuteErrors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 1209, in patched
+    return func(*args, **keywargs)
+  File "my_project/tests/test_app.py", line 49, in test_url_does_not_exist_should_not_create_path
+    self.result = app.execute()
+  File "my_project/core/app.py", line 17, in execute
+    response = urlopen(config.INCENDIOS_CSV_FILE_LINK)
+  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 965, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 1025, in _mock_call
+    raise effect
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+
+----------------------------------------------------------------------
+
+```
+
+
+Implementando para o teste passar...
+
+```python
+
+[...]
+
+def execute():
+    msg = "Bem vindo ao Tutorial de Mocks!"
+    try:
+        response = urlopen(config.INCENDIOS_CSV_FILE_LINK)
+    except URLError as exc:
+        msg = f"Could not get CSV file: {exc}"
+    else:
+        csvfile = pathlib.Path("dados_incendios_cf.csv")
+        csvfile.write_text(response)
+    return msg
+
+ ```
+
+... e eles devem passar!
+
+```bash
+test_url_does_not_exist_should_not_create_path (tests.test_app.TestExecuteErrors) ... ok
+test_creates_path_to_csvfile (tests.test_app.TestExecuteOK) ... ok
+test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
+test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
+test_writes_csvfile_content (tests.test_app.TestExecuteOK) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.007s
+
+OK
+```
+
 
 
 ### Mock wraps
