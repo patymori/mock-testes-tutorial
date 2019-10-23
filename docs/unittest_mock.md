@@ -201,7 +201,9 @@ class TestExecuteOK(TestCase):
         self.mock_path.assert_called_with("dados_incendios_cf.csv")
 
     def test_writes_csvfile_content(self):
-        self.mock_path.return_value.write_text.assert_called_with(self.mock_urlopen())
+        self.mock_path.return_value.write_text.assert_called_with(
+            self.mock_urlopen.return_value.read.return_value.decode.return_value
+        )
 
 [...]
 ```
@@ -266,7 +268,7 @@ def execute():
 
     [...]
     csvfile = pathlib.Path("dados_incendios_cf.csv")
-    csvfile.write_text(response)
+    csvfile.write_text(response.read().decode("utf-8"))
     return msg
 
  ```
@@ -284,6 +286,10 @@ Ran 4 tests in 0.007s
 
 OK
 ```
+
+### _Mock autospec_
+
+É uma outra forma de utilizar o spec, checando, inclusive, a assinatura dos métodos, por exemplo. Para usá-lo, basta definir `autospec=True`.
 
 
 ## Problema: arquivo CSV indisponível
@@ -386,15 +392,304 @@ OK
 ```
 
 
+## Problema: envio dos dados para serviço externo
 
-### Mock wraps
+O `execute()` deverá ler o arquivo CSV e enviar os dados para um serviço externo, que armazenará e cuidará de disponibilizar os dados para usuários. Foi determinado que é importante organizar os dados por:
+ * categoria da UC
+ * grupo de proteção
+ * bioma referencial
+
+Portanto, podemos definir nosso domínio:
+
+ * UnidadeConservacao
+ * Categoria
+ * GrupoProtecao
+ * BiomaReferencial
+
+A API REST para o serviço externo disponibiliza os seguintes endpoints:
+
+ * `PUT /entity`: cria entidade com a lista de campos informados, cada um com seu tipo
+ * `POST /add`: adiciona dados para a uma entidade
+
+Vamos ao teste!
+
+```python
+[...]
+
+@mock.patch('core.app.urlopen', autospec=True)
+@mock.patch('core.app.Request', autospec=True)
+class TestServiceAdapter(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.headers = {
+            "Content-Type": "application/json",
+        }
+        cls.service_config = {
+            "host": "http://datastoreservice:8000",
+        }
+        cls.adapter = app.ServiceAdapter(**cls.service_config)
+
+    def test_init(self, MockRequest, mock_urlopen):
+        self.assertEqual(self.adapter._host, self.service_config["host"])
+        self.assertEqual(self.adapter._headers, {"Content-Type": "application/json"})
+
+    def test_create_entity(self, MockRequest, mock_urlopen):
+        fields = {
+            "field_1": {
+                "type": "string",
+                "mandatory": True,
+            },
+            "field_2": {
+                "type": "integer",
+                "mandatory": True,
+            },
+            "field_3": {
+                "type": "date",
+                "mandatory": False,
+            },
+            "field_4": {
+                "type": "boolean",
+                "mandatory": False,
+            },
+        }
+        self.adapter.create_entity(name="test", fields=fields)
+        MockRequest.assert_called_once_with(
+            f'{self.service_config["host"]}/entity',
+            data=fields,
+            headers=self.headers,
+            method="PUT",
+        )
+        mock_urlopen.assert_called_once_with(MockRequest.return_value)
+
+    def test_add_data(self, MockRequest, mock_urlopen):
+        data = {
+            "field_1": "APA Costa das Algas",
+            "field_2": "integer",
+            "field_4": "boolean",
+        }
+        self.adapter.add_data(name="test", data=data)
+        MockRequest.assert_called_once_with(
+            f'{self.service_config["host"]}/add',
+            data=data,
+            headers=self.headers,
+            method="POST",
+        )
+        mock_urlopen.assert_called_once_with(MockRequest.return_value)
+
+    def test_fetch_data(self, MockRequest, mock_urlopen):
+        data_dict = {
+            "field_1": "APA Costa das Algas",
+            "field_2": "integer",
+            "field_4": "boolean",
+        }
+        data = str(data_dict).encode("utf-8")
+        mock_handler = mock.Mock()
+        mock_handler.read.return_value = data
+        MockResponse = mock.MagicMock()
+        MockResponse.__enter__.return_value = mock_handler
+        mock_urlopen.return_value = MockResponse
+
+        result = self.adapter.fetch_data(name="test", id="1234")
+
+        self.assertIsNotNone(result)
+        self.assertEqual(result, data)
+        mock_urlopen.assert_called_once_with(f'{self.service_config["host"]}/test/1234')
+
+    [...]
+```
+
+Antes da implementação, os testes devem resultar em erros:
+
+```bash
+======================================================================
+ERROR: setUpClass (tests.test_app.TestServiceAdapter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "my_project/tests/test_app.py", line 21, in setUpClass
+    cls.adapter = app.ServiceAdapter(**cls.service_config)
+AttributeError: module 'core.app' has no attribute 'ServiceAdapter'
+
+----------------------------------------------------------------------
+```
+
+Depois da implementação...
+
+```python
+class ServiceAdapter:
+    def __init__(self, **config):
+        self._host = config.get("host")
+        self._headers = {"Content-Type": "application/json"}
+
+    def create_entity(self, name, fields):
+        req = Request(
+            self._host + "/entity",
+            data=fields,
+            headers=self._headers,
+            method="PUT",
+        )
+        response = urlopen(req)
+
+    def add_data(self, name, data):
+        req = Request(
+            self._host + "/add",
+            data=data,
+            headers=self._headers,
+            method="POST",
+        )
+        response = urlopen(req)
+
+    def fetch_data(self, name, id):
+        response = urlopen(f'{self._host}/{name}/{id}')
+```
+
+... os testes passam!
+
+```bash
+test_url_does_not_exist_should_not_create_path (tests.test_app.TestExecuteErrors) ... ok
+test_creates_path_to_csvfile (tests.test_app.TestExecuteOK) ... ok
+test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
+test_gets_service_adapter (tests.test_app.TestExecuteOK) ... ok
+test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
+test_writes_csvfile_content (tests.test_app.TestExecuteOK) ... ok
+test_add_data (tests.test_app.TestServiceAdapter) ... ok
+test_create_entity (tests.test_app.TestServiceAdapter) ... ok
+test_init (tests.test_app.TestServiceAdapter) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.045s
+
+OK
+```
+
+E agora a gente faz as alterações no `execute()`. Primeiro, os testes:
+
+```python
+[...]
+
+class TestExecuteOK(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        [...]
+
+        cls.mock_service_adapter_patcher = mock.patch(
+            'core.app.ServiceAdapter',
+            name="MockServiceAdapter",
+        )
+        cls.mock_service_adapter = cls.mock_service_adapter_patcher.start()
+        cls.service_config = {
+            "host": "https://localhost:8888",
+        }
+        cls.mock_service_config_patcher = mock.patch.dict(
+            'core.config.SERVICE_CONFIG', **cls.service_config
+        )
+        cls.mock_service_config = cls.mock_service_config_patcher.start()
+
+    @classmethod
+    def tearDownClass(cls):
+        [...]
+
+        cls.mock_service_adapter_patcher.stop()
+        cls.mock_service_config_patcher.stop()
+
+    def setUp(self):
+        self.result = app.execute()
+
+    def test_gets_service_adapter(self):
+        self.mock_service_adapter.assert_called_with(**self.service_config)
+
+[...]
+```
+
+... que, ao ser rodado...
+
+```bash
+======================================================================
+FAIL: test_gets_service_adapter (tests.test_app.TestExecuteOK)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "my_project/tests/test_app.py", line 137, in test_gets_service_adapter
+    self.mock_service_adapter.assert_called_with(**self.service_config)
+  File "/home/username/.pyenv/versions/3.7.4/lib/python3.7/unittest/mock.py", line 825, in assert_called_with
+    raise AssertionError('Expected call: %s\nNot called' % (expected,))
+AssertionError: Expected call: MockServiceAdapter(host='https://localhost:8888')
+Not called
+
+----------------------------------------------------------------------
+```
+
+Aí, implementamos:
+
+```python
+def execute():
+    [...]
+    else:
+        csvfile = pathlib.Path("dados_incendios_cf.csv")
+        csvfile.write_text(response)
+        adapter = ServiceAdapter(**config.SERVICE_CONFIG)
+    return msg
+```
+
+E os testes passam!
+
+```bash
+test_url_does_not_exist_should_not_create_path (tests.test_app.TestExecuteErrors) ... ok
+test_creates_path_to_csvfile (tests.test_app.TestExecuteOK) ... ok
+test_gets_csvfile_from_urllink_in_config (tests.test_app.TestExecuteOK) ... ok
+test_gets_service_adapter (tests.test_app.TestExecuteOK) ... ok
+test_returns_hello_app (tests.test_app.TestExecuteOK) ... ok
+test_writes_csvfile_content (tests.test_app.TestExecuteOK) ... ok
+test_add_data (tests.test_app.TestServiceAdapter) ... ok
+test_create_entity (tests.test_app.TestServiceAdapter) ... ok
+test_fetch_data (tests.test_app.TestServiceAdapter) ... ok
+test_init (tests.test_app.TestServiceAdapter) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.097s
+
+OK
+```
+
 
 ## configure_mock
 
-## call_args, call_args_list
+Permite definir um dicionário com a cadeia de `return_value` de chamadas e retornar um outro objeto _Mock_
 
-## PropertyMock
+```python
+>>> class Something:
+...     def __init__(self):
+...         self.backend = BackendProvider()
+...     def method(self):
+...         response = self.backend.get_endpoint('foobar').create_call('spam', 'eggs').start_call()
+...         # more code
+```
+
+Olha o tamanho da linha necessária!
+
+```python
+mock_backend.get_endpoint.return_value.create_call.return_value.start_call.return_value = mock_response
+```
+
+Usando o _Mock.configure_mock()_:
+
+```python
+>>> something = Something()
+>>> mock_response = Mock(spec=open)
+>>> mock_backend = Mock()
+>>> config = {'get_endpoint.return_value.create_call.return_value.start_call.return_value': mock_response}
+>>> mock_backend.configure_mock(**config)
+```
+
+
 
 ## Deletar atributos
 
-## Seal
+Objetos Mock criam os atributos conforme a utilização deles, o que permite simular objetos de qualquer tipo. Porém, às vezes precisamos da ausência de um atributo. Para isso, podemos deletar o atributo com `del` dessa forma:
+
+```python
+>>> mock = MagicMock()
+>>> hasattr(mock, 'is_python_brasil')
+True
+>>> del mock.is_python_brasil
+>>> hasattr(mock, 'is_python_brasil')
+False
+```

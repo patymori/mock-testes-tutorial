@@ -58,55 +58,25 @@ Agora vamos criar um projeto do zero, usando TDD para nos guiar. Vamos utilizar 
 
 Nossa aplicação vai baixar um arquivo sobre os incêndios em Unidades de Conservação Federais entre 2012 e 2018 e vai armazenar os dados em um banco de dados, que será disponibilizado para análise.
 
-O arquivo está em formato CSV e se encontra no link do Instituto Chico Mentes: http://www.icmbio.gov.br/acessoainformacao/images/stories/PDA/Planilhas/Planilhas_CSV/DIMIF-queima.csv.
+O arquivo está em formato CSV e se encontra no link do Instituto Chico Mentes: http://www.icmbio.gov.br/acessoainformacao/images/stories/PDA/Planilhas/Planilhas_CSV/DIMIF-queima.csv, com os seguintes dados:
+- Código CNUC
+- Nome da UC
+- Categoria da UC: sigla federal
+- Categoria da UC: nomenclatura nacional
+- Grupo de Proteção
+- Ano de criação
+- Coordenação Regional do ICMBio
+- Área estimada da UC (ha)
+- Bioma referencial
+- Área queimada em 2018
+- Área queimada em 2017
+- Área queimada em 2016
+- Área queimada em 2015
+- Área queimada em 2014
+- Área queimada em 2013
+- Área queimada em 2012
 
-Para que os dados sejam armazenados corretamente, é necessário criar um banco de dados com uma tabela contendo os campos presentes no arquivo CSV:
- - Código CNUC
- - Nome da UC
- - Categoria da UC: sigla federal
- - Categoria da UC: nomenclatura nacional
- - Grupo de Proteção
- - Ano de criação
- - Coordenação Regional do ICMBio
- - Área estimada da UC (ha)
- - Bioma referencial
- - Área queimada em 2018
- - Área queimada em 2017
- - Área queimada em 2016
- - Área queimada em 2015
- - Área queimada em 2014
- - Área queimada em 2013
- - Área queimada em 2012
-
-Para este tutorial vamos usar o SQLite3 mesmo e o seguinte comando cria uma base de dados `incendios_ucf.db`:
-
-```python
-import sqlite3
-
-with sqlite3.connect('incendios_ucf.db') as conn:
-    c = conn.cursor()
-    c.execute("""
-        CREATE TABLE incendios (
-          codigo,
-          nome_uc,
-          categoria_uc_sigla_federal,
-          categoria_uc_nomen_nacional,
-          grupo_proteção,
-          criacao,
-          cr_icmbio,
-          area_estimada_uc,
-          bioma_referencial,
-          area_queimada_2018,
-          area_queimada_2017,
-          area_queimada_2016,
-          area_queimada_2015,
-          area_queimada_2014,
-          area_queimada_2013,
-          area_queimada_2012
-        )
-    """)
-
-```
+O armazenamento dos dados será feito através de um serviço externo, que tem uma REST API.
 
 Vamos começar montando a estrutura básica de um projeto:
 
