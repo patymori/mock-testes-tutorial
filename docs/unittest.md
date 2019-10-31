@@ -42,7 +42,6 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
 ```
 
 E para rodá-lo, basta executar o seguinte comando:
@@ -91,6 +90,7 @@ my_project
 
 Agora, defina o conteúdo do `setup.py`:
 
+_setup.py_
 ```python
 import setuptools
 import pathlib
@@ -129,8 +129,8 @@ setuptools.setup(
 
 ... e a nossa classe de teste:
 
+_tests/test_app.py_
 ```python
-import json
 from unittest import TestCase, main
 
 from core import app
@@ -177,7 +177,16 @@ Test failed: <unittest.runner.TextTestResult run=1 errors=1 failures=0>
 error: Test failed: <unittest.runner.TextTestResult run=1 errors=1 failures=0>
 ```
 
-Vamos corrigindo _ERROR_, até começarem a ocorrer _FAIL_ e, finalmente, ter nossa implementação com o teste rodando. Ao final desta primeira etapa, teremos esta árvore de projeto:
+Vamos corrigindo _ERROR_, até começarem a ocorrer _FAIL_ e, finalmente, ter nossa implementação com o teste rodando.
+A mensagem de erro acima indica que está faltando a função `execute` no modulo: `core.app`, para resolver isso precisamos escrever este código:
+
+_core/app.py_
+```python
+def execute():
+    return "Bem vindo ao Tutorial de Mocks!"
+```
+
+Ao final desta primeira etapa, teremos esta árvore de projeto:
 
 ```bash
 my_project
@@ -189,4 +198,28 @@ my_project
 │   └── test_app.py
 ├── README.md
 └── setup.py
+```
+
+Rodando novamente os testes:
+
+```bash
+python setup.py test
+```
+a saida deve ser assim:
+```bash
+running test
+running egg_info
+writing my_project.egg-info/PKG-INFO
+writing dependency_links to my_project.egg-info/dependency_links.txt
+writing entry points to my_project.egg-info/entry_points.txt
+writing top-level names to my_project.egg-info/top_level.txt
+reading manifest file 'my_project.egg-info/SOURCES.txt'
+writing manifest file 'my_project.egg-info/SOURCES.txt'
+running build_ext
+test_returns_hello_app (tests.test_app.TestExecute) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
 ```
