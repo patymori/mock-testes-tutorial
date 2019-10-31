@@ -178,7 +178,7 @@ error: Test failed: <unittest.runner.TextTestResult run=1 errors=1 failures=0>
 ```
 
 Vamos corrigindo _ERROR_, até começarem a ocorrer _FAIL_ e, finalmente, ter nossa implementação com o teste rodando.
-A mensagem de erro acima indica que esta faltando a função `execute` no modulo: `core.app`, para resolver isso precisamos escrever este código:
+A mensagem de erro acima indica que está faltando a função `execute` no modulo: `core.app`, para resolver isso precisamos escrever este código:
 
 _core/app.py_
 ```python
